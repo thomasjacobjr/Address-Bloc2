@@ -89,7 +89,7 @@ RSpec.describe AddressBook do
       book.import_from_csv("entries.csv")
       # Check the fifth entry
       entry_five = book.entries[4]
-      check_entry(entry_five, "Sussie", "555-555-2035", "sussie@blocmail.com")
+      check_entry(entry_five, "Sussie", "555-555-2036", "sussie@blocmail.com")
     end
   end
 
@@ -136,7 +136,7 @@ RSpec.describe AddressBook do
      end
 
      it "searches AddressBook for Billy" do
-       book.import_from_csv("entries")
+       book.import_from_csv("entries.csv")
        entry = book.binary_search("Billy")
        expect(entry).to be_nil
      end

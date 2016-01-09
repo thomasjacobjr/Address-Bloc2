@@ -32,8 +32,8 @@ class AddressBook
     lower = 0
     upper = @entries.length - 1
     while lower <= upper
-      md = (lower + upper) / 2
-      mid_name = @entries[mid].Name
+      mid = (lower + upper) / 2
+      mid_name = @entries[mid].name
 
       if name == mid_name
         return @entries[mid]
@@ -46,3 +46,4 @@ class AddressBook
 
     return nil
   end
+end
